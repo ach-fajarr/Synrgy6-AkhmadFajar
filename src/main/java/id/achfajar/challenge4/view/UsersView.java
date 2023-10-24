@@ -3,8 +3,16 @@ package id.achfajar.challenge4.view;
 import id.achfajar.challenge4.model.Users;
 
 public class UsersView {
-    GeneralView g = new GeneralView();
-    public void userSetting(Users user){
+
+    static GeneralView g = new GeneralView();
+
+    public void headerInfo(String info){
+        System.out.println(g.LINE +
+                "\nBinarFuud\n" +
+                g.LINE2 +
+                "\n \n"+info);
+    }
+    public static void userSetting(Users user){
         System.out.println(g.LINE + "\n" +
                 "Pengaturan Akun \n"+
                 g.LINE2+ "\n \n" +
@@ -16,20 +24,6 @@ public class UsersView {
                 "3. Kembali \n \n" + g.LINE);
         System.out.print("Silahkan masukkan pilihan anda => ");
     }
-    public void headerReg(){
-        System.out.println(g.LINE +
-                "\nBinarFuud" +
-                g.LINE +
-                "\n \nPendaftaran pengguna baru \n"
-        );
-    }
-    public void headerLogin(){
-        System.out.println(g.LINE +
-                "\nBinarFuud \n" +
-                g.LINE +
-                "\n \nGunakan email dan password anda \n"
-        );
-    }
     public void fieldEmail (){
         System.out.print("Email \t\t : ");
     }
@@ -39,10 +33,17 @@ public class UsersView {
     public void fieldPassword (){
         System.out.print("Password \t : ");
     }
-    public void delSuccess(){
+    public void updateUser(){
+        System.out.println("Perbarui akun \ntekan enter jika tidak ingin merubah kolom tersebut\n");
+    }
+    public static void delSuccess(){
         System.out.println("Akun anda telah dihapus");
     }
     public void infoSuccess (){
         System.out.println("Akun anda telah dibuat");
+    }
+
+    public void userExists() {
+        System.out.println("\n\nMaaf email telah terdaftar");
     }
 }

@@ -3,7 +3,7 @@ package id.achfajar.challenge4.view;
 import id.achfajar.challenge4.model.Users;
 
 public class GeneralView {
-    public void welcome(){
+    public static void welcome(){
         System.out.println(LINE + "\n" +
                 "Selamat datang di BinarFud \n"+
                 LINE2+ "\n \n" +
@@ -11,7 +11,7 @@ public class GeneralView {
                 "2. Daftar \n \n" + LINE);
         System.out.print("Silahkan masukkan pilihan anda => ");
     }
-    public void home(Users user){
+    public static void home(Users user){
         System.out.println(LINE + "\n" +
                 "Selamat datang di BinarFud \n"+
                 user.getUsername()+ "\n" +

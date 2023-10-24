@@ -27,7 +27,7 @@ public class OrderView {
         System.out.print("Silahkan masukkan pilihan anda => ");
     }
     public void confirmOption(){
-        System.out.println(g.LINE2+ "\n \n" +
+        System.out.println(
                 "1. Konfirmasi dan bayar \n" +
                 "2. Batalkan pesanan \n" +
                 "0. Kembali \n \n" + g.LINE);

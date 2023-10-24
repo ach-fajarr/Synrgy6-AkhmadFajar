@@ -19,10 +19,9 @@ public class MerchantView {
         System.out.println(g.LINE2+ "\n \n" +
                 "1. Buat toko \n" +
                 "2. Tambah produk untuk toko \n" +
-                "3. Ubah nama toko \n" +
-                "4. Ubah lokasi toko \n" +
-                "5. Buka/Tutup toko \n" +
-                "6. Kembali \n \n" + g.LINE);
+                "3. Ubah data toko \n" +
+                "4. Buka/Tutup toko \n" +
+                "5. Kembali \n \n" + g.LINE);
         System.out.print("Silahkan masukkan pilihan anda => ");
     }
     public void cancelOption(){
@@ -37,6 +36,8 @@ public class MerchantView {
     public void statusOption(){
         System.out.print("Tekan 1 untuk buka dan 2 untuk tutup => ");
     }
+
+    //================================================================================================
 
     public void productHeader(){
         System.out.println(g.LINE + "\n" +

@@ -20,8 +20,11 @@ public class Users {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
-    private String username;
+
+    @Column(unique = true)
     private String email;
+
+    private String username;
     private String password;
 
     @OneToMany(mappedBy = "users")

@@ -1,9 +1,6 @@
 package id.achfajar.challenge4.controller;
 
 import id.achfajar.challenge4.model.Users;
-import id.achfajar.challenge4.service.MerchantService;
-import id.achfajar.challenge4.service.OrderService;
-import id.achfajar.challenge4.service.UsersService;
 import id.achfajar.challenge4.view.*;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,29 +16,27 @@ import java.util.Scanner;
 
 @Component
 public class BinarFudController {
-    @Autowired
-    UsersService usersService;
-    @Autowired
-    MerchantService merchantService;
-    @Autowired
-    OrderService orderService;
 
+    @Autowired
+    UsersController usersController;
+    @Autowired
+    MerchantController merchantController;
+    @Autowired
+    OrderController orderController;
     @Setter
     protected Users activeUser;
-    GeneralView viewG = new GeneralView();
     ErrorView viewE = new ErrorView();
-    UsersView viewU = new UsersView();
     MerchantView viewM = new MerchantView();
     OrderView viewO = new OrderView();
 
 
     public void welcome(){
-        viewG.welcome();
+        GeneralView.welcome();
         try {
             int option = inputInt();
             switch (option){
                 case 1 -> loginUser();
-                case 2 -> register();
+                case 2 -> {usersController.addUser();welcome();}
                 default -> {
                     viewE.wrongInput();
                     welcome();
@@ -53,7 +48,7 @@ public class BinarFudController {
         }
     }
     private void loginUser() {
-        Users user = usersService.loginUser();
+        Users user = usersController.loginUser();
         if (user == null){
             viewE.errorUserNotFound();
             welcome();
@@ -62,22 +57,17 @@ public class BinarFudController {
             home();
         }
     }
-    private void register(){
-        usersService.addUser();
-        viewU.infoSuccess();
-        welcome();
-    }
     //====================================================================================
     public void home(){
-        viewG.home(activeUser);
+        GeneralView.home(activeUser);
         try {
             int option = inputInt();
             switch (option){
                 case 1 -> order();
-                case 2 -> orderList();
+                case 2 -> {orderController.historyOrder(activeUser); home();}
                 case 3 -> merchant();
                 case 4 -> userSetting();
-                case 5 -> logout();
+                case 5 -> {setActiveUser(null); merchantController.clearMap(); welcome();}
                 default -> {
                     viewE.wrongInput();
                     home();
@@ -89,47 +79,34 @@ public class BinarFudController {
         }
     }
 
-    private void orderList() {
-        orderService.historyOrder();
-        home();
-    }
-
-    private void logout() {
-        setActiveUser(null);
-        merchantService.clearMap();
-        welcome();
-    }
     //====================================================================================
     private void order() {
         viewO.orderHeader();
-        orderService.mapAllProduct();
-        orderService.printProduct();
+        orderController.mapAllProduct();
+        orderController.printProduct();
         viewO.orderOption();
         try {
             int option = inputInt();
             switch (option){
                 case 99 -> confirmOrder();
                 case 0 -> home();
-                default -> createOrderDetail(option);
+                default -> {orderController.createOrderDetail(option); order();}
             }
         } catch (InputMismatchException e) {
             viewE.wrongInput();
             order();
         }
     }
-    private void createOrderDetail(int option) {
-        orderService.createOrderDetail(option);
-        order();
-    }
+
     private void confirmOrder() {
         viewO.confirmHeader();
-        orderService.printOrderDetail();
+        orderController.printOrderDetail();
         viewO.confirmOption();
         try {
             int option = inputInt();
             switch (option){
-                case 1 -> confirmThisOrder();
-                case 2 -> cancelThisOrder();
+                case 1 -> {orderController.confirmThisOrder(activeUser); order();}
+                case 2 -> {orderController.cancelOrder(activeUser); order();}
                 case 0 -> order();
                 default -> {
                     viewE.wrongInput();
@@ -142,84 +119,51 @@ public class BinarFudController {
         }
     }
 
-    private void confirmThisOrder() {
-        orderService.confirmThisOrder(activeUser);
-        order();
-    }
-
-    private void cancelThisOrder() {
-        orderService.cancelOrder(activeUser);
-        order();
-    }
-
     //====================================================================================
     private void merchant() {
         viewM.merchantHeader();
-        merchantService.mapAllbyUser(activeUser);
-        merchantService.printMerchant();
+        merchantController.printMerchant(activeUser);
         viewM.merchantOption();
         try {
             int option = inputInt();
             switch (option){
-                case 1 -> addMerchant();
+                case 1 -> {merchantController.addMerchant(activeUser);merchant();}
                 case 2 -> addProduct();
-                case 3 -> updateMerchantName();
-                case 4 -> updateMerchantLoc();
-                case 5 -> setOpen();
-                case 6 -> home();
-                default -> {
-                    viewE.wrongInput();
-                    merchant();
-                }
+                case 3 -> updateMerchant();
+                case 4 -> setOpen();
+                case 5 -> home();
+                default -> {viewE.wrongInput(); merchant();}
             }
         } catch (InputMismatchException e) {
             viewE.wrongInput();
             merchant();
         }
     }
-    private void addMerchant() {
-        merchantService.addMerchant(activeUser);
-        merchant();
-    }
-    private void updateMerchantName() {
+    private void updateMerchant() {
         viewM.merchantHeader();
-        merchantService.printMerchant();
+        merchantController.printMerchant(activeUser);
         viewM.productOption();
         try {
             int option = inputInt();
             switch (option){
                 case 0 -> merchant();
-                default -> updateName(option);
+                default -> {merchantController.updateMerchant(option);updateMerchant();}
             }
         } catch (InputMismatchException e) {
             viewE.wrongInput();
-            updateMerchantName();
+            updateMerchant();
         }
     }
-    private void updateMerchantLoc() {
-        viewM.merchantHeader();
-        merchantService.printMerchant();
-        viewM.productOption();
-        try {
-            int option = inputInt();
-            switch (option){
-                case 0 -> merchant();
-                default -> updateLoc(option);
-            }
-        } catch (InputMismatchException e) {
-            viewE.wrongInput();
-            updateMerchantLoc();
-        }
-    }
+
     private void setOpen() {
         viewM.merchantHeader();
-        merchantService.printMerchant();
+        merchantController.printMerchant(activeUser);
         viewM.productOption();
         try {
             int option = inputInt();
             switch (option){
                 case 0 -> merchant();
-                default -> updateOpen(option);
+                default -> {merchantController.updateMerchantStatus(option); setOpen();}
             }
         } catch (InputMismatchException e) {
             viewE.wrongInput();
@@ -227,46 +171,32 @@ public class BinarFudController {
         }
     }
 
-    private void updateOpen(int option) {
-        merchantService.updateMerchantStatus(option);
-        setOpen();
-    }
-    private void updateLoc(int option) {
-        merchantService.updateMerchantLoc(option);
-        updateMerchantLoc();
-    }
-    private void updateName(int option) {
-        merchantService.updateMerchantName(option);
-        updateMerchantName();
-    }
-
     private void addProduct() {
         viewM.productHeader();
-        merchantService.printMerchant();
+        merchantController.printMerchant(activeUser);
         viewM.productOption();
         try {
             int option = inputInt();
             switch (option){
                 case 0 -> merchant();
-                default -> newProduct(option);
+                default -> merchantController.createProduct(option);
             }
         } catch (InputMismatchException e) {
             viewE.wrongInput();
             addProduct();
         }
     }
-    private void newProduct(int option) {
-        merchantService.createProduct(option);
-        merchant();
-    }
     //====================================================================================
     private void userSetting() {
-        viewU.userSetting(activeUser);
+        UsersView.userSetting(activeUser);
         try {
             int option = inputInt();
             switch (option){
-                case 1 -> updateUser();
-                case 2 -> deleteUser();
+                case 1 -> {
+                    usersController.updateUser(activeUser);
+                    activeUser = usersController.getUserByID(activeUser.getId());
+                    userSetting();}
+                case 2 -> {usersController.deleteUser(activeUser);welcome();}
                 case 3 -> home();
                 default -> {
                     viewE.wrongInput();
@@ -278,15 +208,7 @@ public class BinarFudController {
             userSetting();
         }
     }
-    private void updateUser(){
-        usersService.updateUser(activeUser);
-        userSetting();
-    }
-    private void deleteUser() {
-        usersService.deleteUser(activeUser);
-        viewU.delSuccess();
-        welcome();
-    }
+
     //====================================================================================
 
     public String setCurrency (double price){
@@ -300,9 +222,9 @@ public class BinarFudController {
 
         return fd.format(price);
     }
-    public LocalDateTime formatTime(LocalDateTime localDateTime) {
+    public String formatTime(LocalDateTime localDateTime) {
         DateTimeFormatter fmt = DateTimeFormatter.ofPattern("yyyy/MM/dd HH.mm");
-        return LocalDateTime.parse(localDateTime.format(fmt));
+        return localDateTime.format(fmt);
     }
     public String inputLine(){
         Scanner scanner = new Scanner(System.in);

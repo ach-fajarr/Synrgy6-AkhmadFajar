@@ -26,7 +26,7 @@ public class Order {
     private boolean completed;
 
     @ManyToOne(targetEntity = Users.class)
-    @JoinColumn(name = "users_id", insertable = false, updatable = false)
+    @JoinColumn(name = "users_id")
     private Users users;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "orders", fetch = FetchType.EAGER)
