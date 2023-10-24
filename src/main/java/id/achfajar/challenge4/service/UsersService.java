@@ -1,7 +1,9 @@
 package id.achfajar.challenge4.service;
 
+import id.achfajar.challenge4.controller.BinarFudController;
 import id.achfajar.challenge4.model.Users;
 import id.achfajar.challenge4.repository.UsersRepository;
+import id.achfajar.challenge4.view.UsersView;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,11 +15,39 @@ import java.util.UUID;
 public class UsersService {
     @Autowired
     UsersRepository usersRepository;
+    BinarFudController c = new BinarFudController();
+    UsersView view = new UsersView();
 
-
+    public void createUser() {
+        view.headerInfo("Pendaftaran pengguna baru");
+        view.fieldEmail();
+        String email = c.inputLine();
+        view.fieldUserName();
+        String uName = c.inputLine();
+        view.fieldPassword();
+        String pass = c.inputLine();
+        try {
+            addUser(email, pass, uName);
+            view.infoSuccess();
+        } catch (Exception e) {
+            view.userExists();
+        }
+    }
+    public void updateUser(Users activeU) {
+        view.updateUser();
+        view.fieldEmail();
+        String email = c.inputLine();
+        view.fieldUserName();
+        String uName = c.inputLine();
+        view.fieldPassword();
+        String pass = c.inputLine();
+        updateUser(activeU.getId(), email, pass, uName);
+    }
     public void deleteUser(Users user){
         usersRepository.delete(user);
+        UsersView.delSuccess();
     }
+    //================================================================================
     public void addUser(String mail, String pass, String name){
         usersRepository.addUser(mail, pass, name);
     }

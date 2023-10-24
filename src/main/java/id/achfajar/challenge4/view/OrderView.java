@@ -1,43 +1,43 @@
 package id.achfajar.challenge4.view;
 
 public class OrderView {
-    GeneralView g = new GeneralView();
-    public void headerInfo(String info){
+    static GeneralView g = new GeneralView();
+    public static void headerInfo(String info){
         System.out.println(g.LINE +
                 "\nBinarFuud\n" +
                 g.LINE2 +
                 "\n \n"+info);
     }
-    public void orderHeader(){
+    public static void orderHeader(){
         System.out.println(g.LINE + "\n" +
                 "BinarFud \n"+
                 g.LINE2+ "\n" +
                 "Daftar menu :");
     }
-    public void confirmHeader(){
+    public static void confirmHeader(){
         System.out.println(g.LINE + "\n" +
                 "Konfirmasi pesanan \n"+
                 g.LINE2+ "\n" +
                 "daftar pesanan kamu");
     }
-    public void orderOption(){
+    public static void orderOption(){
         System.out.println(g.LINE2+ "\n \n" +
                 "99. Konfirmasi pesanan \n" +
                 "0. Kembali \n \n" + g.LINE);
         System.out.print("Silahkan masukkan pilihan anda => ");
     }
-    public void confirmOption(){
+    public static void confirmOption(){
         System.out.println(
-                "1. Konfirmasi dan bayar \n" +
-                "2. Batalkan pesanan \n" +
-                "0. Kembali \n \n" + g.LINE);
+                "\n1. Konfirmasi dan bayar \n" +
+                    "2. Batalkan pesanan \n" +
+                    "0. Kembali \n \n" + g.LINE);
         System.out.print("Silahkan masukkan pilihan anda => ");
     }
 
     public void quantity(){
         System.out.print("Masukkan jumlah pesanan => ");
     }
-    public void cancel(){
+    public static void cancel(){
         System.out.println("Apakah anda ingin membatalkan pesanan ini");
         System.out.println("tekan (Y) untuk ya dan (T) untuk kembali ke menu konfirmasi");
         System.out.print("=>  ");
@@ -50,7 +50,7 @@ public class OrderView {
     public void fieldAddress(){
         System.out.print("Masukkan alamat pengiriman => ");
     }
-    public void backOption(){
+    public static void backOption(){
         System.out.print("tekan apapun untuk kembali => ");
     }
 }
