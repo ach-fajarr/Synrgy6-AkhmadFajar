@@ -6,6 +6,7 @@ import id.achfajar.challenge4.repository.OrderDetailRepository;
 import id.achfajar.challenge4.repository.OrderRepository;
 import id.achfajar.challenge4.view.ErrorView;
 import id.achfajar.challenge4.view.GeneralView;
+import id.achfajar.challenge4.view.MerchantView;
 import id.achfajar.challenge4.view.OrderView;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,13 +29,41 @@ public class OrderService {
 
     @Setter
     private Product thisProduct;
-    OrderView viewO = new OrderView();
     BinarFudController c = new BinarFudController();
     List<OrderDetail> orderDetailList = new ArrayList<>();
     private Map<Integer, Product> productMap = new HashMap<>();
 
-    public void mapAllProduct(){
+
+    public void filterByName() {
+        OrderView.fieldName();
+        String name = c.inputLine();
+        List<Product> productList = merchantService.filterProductsByName(name);
+        mapAllProduct(productList);
+    }
+    public void filterByType() {
+//        boolean active = true;
+        while(true){
+            OrderView.headerInfo("Jenis makanan:");
+            MerchantView.inputTypeID(merchantService.getAllType());
+            int input = c.inputInt();
+            if(input==0){
+                break;
+            } else {
+                List<Product> productList = merchantService.filterProductsByProductType(input);
+                mapAllProduct(productList);
+                break;
+            }
+        }
+    }
+    public void filterByOpen() {
+        mapAllProduct(merchantService.getOpenMerchants());
+    }
+    public void noFilter(){
         List<Product> productList = merchantService.getAllProduct();
+        mapAllProduct(productList);
+    }
+    public void mapAllProduct(List<Product> productList){
+        productMap.clear();
         if (productList.isEmpty()){
             System.out.println("Produk Kosong");
         } else {
@@ -72,9 +101,9 @@ public class OrderService {
     }
     public void createOrderDetail(int input){
         findProduct(input);
-        viewO.headerInfo("Pesan makanan");
+        OrderView.headerInfo("Pesan makanan");
         infoProduct();
-        viewO.quantity();
+        OrderView.quantity();
         int quantity = c.inputInt();
         if (findOrderListByName(thisProduct.getProduct_name()) == null){
             newOrderDetail(quantity);
@@ -137,9 +166,9 @@ public class OrderService {
     }
     public void confirmThisOrder(Users activeUser) {
         if (orderDetailList.isEmpty()){
-            viewO.errorMsg();
+            OrderView.errorMsg();
         } else {
-            viewO.fieldAddress();
+            OrderView.fieldAddress();
             String address = c.inputLine();
             Order od = new Order();
             od.setDestination_address(address);
@@ -162,10 +191,13 @@ public class OrderService {
         String fmt = "%-3d %-15s %-20s %-17s%n";
         String fmt2 = "%-3s %-15s %-20s %-17s%n";
         System.out.printf(fmt2,"", "Status", "Alamat pengiriman", "Waktu");
+        System.out.printf(fmt2,"", "--------", "-------------------", "-------");
         int i=1;
         for (Order od : orders){
             System.out.printf(fmt, i, od.getStatus(), od.getDestination_address(), c.formatTime(od.getOrder_time()));
-            System.out.println("\tProduk yang dipesan :");
+            if(od.isCompleted()){
+                System.out.println("\tProduk yang dipesan :");
+            } else {System.out.println("\tProduk yang dibatalkan :");}
             List<OrderDetail> odt = od.getOrderDetailList();
             odt.forEach((o)->
                     System.out.println("\t- "+o.getProduct().getProduct_name()+" | "
@@ -184,4 +216,6 @@ public class OrderService {
     public List<Order> getAllByUser(Users user){
         return orderRepository.findAllByUsers(user);
     }
+
+
 }

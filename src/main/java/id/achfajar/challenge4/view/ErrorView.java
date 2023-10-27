@@ -8,7 +8,7 @@ public class ErrorView {
         System.out.println("Maaf opsi yang anda masukkan salah");
     }
     public static void errorUserNotFound(){
-        System.out.println("Maaf email atau password anda salah");
+        System.out.println("Silahkan masuk terlebih dahulu");
     }
 
 }

@@ -12,6 +12,7 @@ public class Challenge4Application {
 	public static void main(String[] args) {
 		BinarFudController bc = SpringApplication.run(Challenge4Application.class, args)
 				.getBean(BinarFudController.class);
+		bc.initiateTypeProductData();
 		bc.welcome();
 	}
 

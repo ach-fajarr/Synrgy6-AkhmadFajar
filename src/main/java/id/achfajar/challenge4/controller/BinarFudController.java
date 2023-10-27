@@ -1,10 +1,10 @@
 package id.achfajar.challenge4.controller;
 
 import id.achfajar.challenge4.model.Users;
-import id.achfajar.challenge4.service.OrderService;
-import id.achfajar.challenge4.service.UsersService;
 import id.achfajar.challenge4.view.*;
 import lombok.Setter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -26,10 +26,14 @@ public class BinarFudController {
     @Autowired
     OrderController orderController;
 
+
     @Setter
     protected Users activeUser;
+    private final static Logger logger = LoggerFactory.getLogger(BinarFudController.class);
 
-
+    public void initiateTypeProductData(){
+        merchantController.initiateData();
+    }
     public void welcome(){
         boolean active = true;
         while (active){
@@ -37,20 +41,34 @@ public class BinarFudController {
                 GeneralView.welcome();
                 int option = inputInt();
                 switch (option){
-                    case 1 -> loginUser();
+                    case 1 -> loginUserWithPostgre();
                     case 2 -> usersController.addUser();
+                    case 3 -> loginUserWithJPA();
                     case 0 -> active=false;
                     default -> ErrorView.wrongInput();
                 }
-            } catch (InputMismatchException e) {ErrorView.wrongInput();}
+            } catch (InputMismatchException e) {
+                ErrorView.wrongInput();
+                logger.error("catch error: {}", e.getMessage());
+            }
         }
     }
-    private void loginUser() {
+
+    private void loginUserWithPostgre() {
         boolean login = usersController.loginUser();
-        if (!login){
-            ErrorView.errorUserNotFound();
-        } else {
+        if (login){
             setActiveUser(usersController.getActiveUser());
+            logger.info("User yang sedang login: {}", activeUser);
+            orderController.setSetFilter(0);
+            home();
+        }
+    }
+    private void loginUserWithJPA() {
+        boolean login = usersController.loginUser2();
+        if (login){
+            setActiveUser(usersController.getActiveUser());
+            logger.info("User yang sedang login: {}", activeUser);
+            orderController.setSetFilter(0);
             home();
         }
     }

@@ -1,5 +1,9 @@
 package id.achfajar.challenge4.view;
 
+import id.achfajar.challenge4.model.ProductType;
+
+import java.util.List;
+
 public class MerchantView {
     GeneralView g = new GeneralView();
 
@@ -18,10 +22,11 @@ public class MerchantView {
     public void merchantOption(){
         System.out.println(g.LINE2+ "\n \n" +
                 "1. Buat toko \n" +
-                "2. Tambah produk untuk toko \n" +
-                "3. Ubah data toko \n" +
-                "4. Buka/Tutup toko \n" +
-                "5. Kembali \n \n" + g.LINE);
+                "2. Ubah data toko \n" +
+                "3. Buka/Tutup toko \n" +
+                "4. Hapus toko \n" +
+                "5. Atur produk untuk setiap toko \n" +
+                "6. Kembali \n \n" + g.LINE);
         System.out.print("Silahkan masukkan pilihan anda => ");
     }
     public void cancelOption(){
@@ -38,16 +43,30 @@ public class MerchantView {
     }
 
     //================================================================================================
-
     public void productHeader(){
         System.out.println(g.LINE + "\n" +
                 "Pilih Toko yang mau ditambah produknya \n"+
                 g.LINE2);
     }
-    public void productOption(){
+    public void selectMerchant(){
         System.out.println(g.LINE2+ "\n" +
                 "tekan 0 untuk Kembali \n");
         System.out.print("Silahkan masukkan toko pilihan anda => ");
+    }
+    public static void inputTypeID (List<ProductType> productTypes){
+        System.out.println("Silahkan pilih jenis makanan");
+        productTypes.forEach(p-> System.out.println(+p.getId()+". "+p.getName()));
+        System.out.println("tekan 0 jika telah menyelesaikan");
+        System.out.print("Pilih nomer jenis produk => ");
+    }
+    public static void selectedID (List<ProductType> productTypes){
+        if (productTypes.isEmpty()){
+            System.out.println("Belum ada yang dipilih\n");
+        } else {
+            System.out.print("Dipilih : ");
+            productTypes.forEach(p-> System.out.print(" | "+p.getName()));
+            System.out.println();
+        }
     }
     public void fieldProductName (){
         System.out.print("Nama produk \t : ");

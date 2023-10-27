@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.Accessors;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -30,4 +31,11 @@ public class Product {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "product")
     private List<OrderDetail> orderDetailList;
 
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(
+            name = "product_and_type",
+            joinColumns = @JoinColumn(name = "product_id"),
+            inverseJoinColumns = @JoinColumn(name = "product_type_id")
+    )
+    private List<ProductType> productTypes = new ArrayList<>();
 }
