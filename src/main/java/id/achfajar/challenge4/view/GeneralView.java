@@ -8,7 +8,8 @@ public class GeneralView {
                 "Selamat datang di BinarFud \n"+
                 LINE2+ "\n \n" +
                 "1. Login \n" +
-                "2. Daftar \n \n" + LINE);
+                "2. Daftar \n" +
+                "3. Login (with JPA) \n \n" + LINE);
         System.out.print("Silahkan masukkan pilihan anda => ");
     }
     public static void home(Users user){

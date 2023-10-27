@@ -25,7 +25,7 @@ public class OrderService {
     @Autowired
     OrderRepository orderRepository;
     @Autowired
-    MerchantService merchantService;
+    ProductService productService;
 
     @Setter
     private Product thisProduct;
@@ -37,29 +37,28 @@ public class OrderService {
     public void filterByName() {
         OrderView.fieldName();
         String name = c.inputLine();
-        List<Product> productList = merchantService.filterProductsByName(name);
+        List<Product> productList = productService.filterProductsByName(name);
         mapAllProduct(productList);
     }
     public void filterByType() {
-//        boolean active = true;
         while(true){
             OrderView.headerInfo("Jenis makanan:");
-            MerchantView.inputTypeID(merchantService.getAllType());
+            MerchantView.inputTypeID(productService.getAllType());
             int input = c.inputInt();
             if(input==0){
                 break;
             } else {
-                List<Product> productList = merchantService.filterProductsByProductType(input);
+                List<Product> productList = productService.filterProductsByProductType(input);
                 mapAllProduct(productList);
                 break;
             }
         }
     }
     public void filterByOpen() {
-        mapAllProduct(merchantService.getOpenMerchants());
+        mapAllProduct(productService.getOpenMerchants());
     }
     public void noFilter(){
-        List<Product> productList = merchantService.getAllProduct();
+        List<Product> productList = productService.getAllProduct();
         mapAllProduct(productList);
     }
     public void mapAllProduct(List<Product> productList){

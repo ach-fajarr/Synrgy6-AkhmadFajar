@@ -5,9 +5,9 @@ import id.achfajar.challenge4.model.ProductType;
 import java.util.List;
 
 public class MerchantView {
-    GeneralView g = new GeneralView();
+    static GeneralView g = new GeneralView();
 
-    public void headerInfo(String info){
+    public static void headerInfo(String info){
         System.out.println(g.LINE +
                 "\nBinarFuud\n" +
                 g.LINE2 +
@@ -17,7 +17,7 @@ public class MerchantView {
         System.out.println(g.LINE + "\n" +
                 "Pengaturan Toko \n"+
                 g.LINE2+ "\n" +
-                "List Toko yang kamu punya");
+                "Pilih dari daftar toko yang kamu punya");
     }
     public void merchantOption(){
         System.out.println(g.LINE2+ "\n \n" +
@@ -26,29 +26,47 @@ public class MerchantView {
                 "3. Buka/Tutup toko \n" +
                 "4. Hapus toko \n" +
                 "5. Atur produk untuk setiap toko \n" +
-                "6. Kembali \n \n" + g.LINE);
+                "0. Kembali \n \n" + g.LINE);
         System.out.print("Silahkan masukkan pilihan anda => ");
     }
-    public void cancelOption(){
+    public static void cancel(String obj){
+        System.out.println("Apakah anda ingin menghapus "+obj+" ini");
+        System.out.println("tekan (Y) untuk ya dan (T) untuk kembali ke menu konfirmasi");
+        System.out.print("=>  ");
+    }
+    public void selectMerchant(){
+        System.out.println(g.LINE2+ "\n" +
+                "tekan 0 untuk Kembali \n");
+        System.out.print("Silahkan masukkan toko pilihan anda => ");
+    }
+    public static void cancelOption(){
         System.out.println("ketik (x) untuk membatalkan\n");
     }
-    public void fieldName(){
+    public static void fieldName(){
         System.out.print("Nama Merchant \t : ");
     }
-    public void fieldLocation(){
+    public static void fieldLocation(){
         System.out.print("Lokasi \t\t\t : ");
     }
-    public void statusOption(){
+    public static void statusOption(){
         System.out.print("Tekan 1 untuk buka dan 2 untuk tutup => ");
     }
 
     //================================================================================================
     public void productHeader(){
         System.out.println(g.LINE + "\n" +
-                "Pilih Toko yang mau ditambah produknya \n"+
+                "Pengaturan Produk dari toko:\n"+
                 g.LINE2);
     }
-    public void selectMerchant(){
+    public static void productSettingOption() {
+        System.out.println(g.LINE2+ "\n \n" +
+                "1. Tambah produk \n" +
+                "2. Ubah Produk \n" +
+                "3. Hapus Produk \n" +
+                "0. Kembali \n \n" + g.LINE);
+        System.out.print("Silahkan masukkan pilihan anda => ");
+    }
+    public void selectProduct(){
         System.out.println(g.LINE2+ "\n" +
                 "tekan 0 untuk Kembali \n");
         System.out.print("Silahkan masukkan toko pilihan anda => ");
@@ -68,16 +86,16 @@ public class MerchantView {
             System.out.println();
         }
     }
-    public void fieldProductName (){
+    public static void fieldProductName(){
         System.out.print("Nama produk \t : ");
     }
-    public void fieldProductPrice (){
+    public static void fieldProductPrice(){
         System.out.print("Harga \t\t\t : ");
     }
-    public void infoCreateOK(String info){
+    public static void infoCreateOK(String info){
         System.out.println(info+" anda telah dibuat");
     }
-    public void infoCreateFail(String info){
+    public static void infoCreateFail(String info){
         System.out.println("Batal membuat "+info);
     }
 }

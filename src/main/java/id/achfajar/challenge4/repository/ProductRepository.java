@@ -3,6 +3,7 @@ package id.achfajar.challenge4.repository;
 import id.achfajar.challenge4.model.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.jpa.repository.query.Procedure;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
@@ -19,6 +20,11 @@ public interface ProductRepository extends JpaRepository<Product, UUID> {
 
     @Query("SELECT p FROM Product p INNER JOIN p.merchant m WHERE m.open = true")
     List<Product> findOpenMerchantProducts();
+
+    @Procedure("update_product")
+    void updateProduct(@Param("id_in") UUID uuid,
+                        @Param("new_name") String name,
+                        @Param("new_price") Integer price);
 
 }
 

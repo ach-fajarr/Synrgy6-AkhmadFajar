@@ -6,11 +6,10 @@ import id.achfajar.challenge4.model.Product;
 import id.achfajar.challenge4.model.ProductType;
 import id.achfajar.challenge4.model.Users;
 import id.achfajar.challenge4.repository.MerchantRepository;
-import id.achfajar.challenge4.repository.ProductRepository;
-import id.achfajar.challenge4.repository.ProductTypeRepository;
 import id.achfajar.challenge4.view.ErrorView;
 import id.achfajar.challenge4.view.MerchantView;
 import jakarta.persistence.EntityManager;
+import lombok.Getter;
 import lombok.Setter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,17 +22,11 @@ import java.util.*;
 public class MerchantService {
     @Autowired
     MerchantRepository merchantRepository;
-    @Autowired
-    ProductRepository productRepository;
-    @Autowired
-    ProductTypeRepository productTypeRepository;
-    @Autowired
-    EntityManager entityManager;
-    MerchantView viewM = new MerchantView();
     BinarFudController c = new BinarFudController();
     private final static Logger logger = LoggerFactory.getLogger(MerchantService.class);
     private Map<Integer, Merchant> merchantMap = new HashMap<>();
     @Setter
+    @Getter
     Merchant thisMerchant;
 
     public void mapAllbyUser(Users user) {
@@ -84,8 +77,7 @@ public class MerchantService {
             })
             .orElse(false);
     }
-
-    private void infoMerchant(){
+    public void infoMerchantSelected(){
         System.out.println("untuk toko => "+thisMerchant.getMerchant_name()+" | "
                 +thisMerchant.getMerchant_location()+" | "+thisMerchant.getStatus());
     }
@@ -93,17 +85,20 @@ public class MerchantService {
         merchantMap.clear();
     }
     public void addMerchant(Users user) {
-        viewM.headerInfo("Pembuatan toko baru");
-        viewM.cancelOption();
-        viewM.fieldName();
+        MerchantView.headerInfo("Pembuatan toko baru");
+        MerchantView.cancelOption();
+        MerchantView.fieldName();
         String name = c.inputLine();
         if (name.equals("x")){
-            viewM.infoCreateFail("toko");
+            MerchantView.infoCreateFail("toko");
+            logger.error("Dibatalkan");
         } else {
-            viewM.fieldLocation();
+            MerchantView.fieldLocation();
             String address = c.inputLine();
             if (address.equals("x")){
-                viewM.infoCreateFail("toko");
+                MerchantView.infoCreateFail("toko");
+                logger.error("Dibatalkan");
+
             } else {
                 //save repo
                 Merchant mc = new Merchant();
@@ -111,9 +106,9 @@ public class MerchantService {
                 mc.setMerchant_location(address);
                 mc.setOpen(true);
                 mc.setUsers(user);
-                mc=entityManager.merge(mc);
+//                mc=entityManager.merge(mc);
                 saveMerchant(mc);
-                viewM.infoCreateOK("Toko");
+                MerchantView.infoCreateOK("Toko");
             }
         }
     }
@@ -121,11 +116,11 @@ public class MerchantService {
         if(!findMerchant(input)){
             ErrorView.wrongInput();
         } else {
-            viewM.headerInfo("Ubah data toko");
-            infoMerchant();
-            viewM.fieldName();
+            MerchantView.headerInfo("Ubah data toko");
+            infoMerchantSelected();
+            MerchantView.fieldName();
             String name = c.inputLine();
-            viewM.fieldLocation();
+            MerchantView.fieldLocation();
             String loc = c.inputLine();
             updateMerchant(thisMerchant.getId(),name,loc);
         }
@@ -134,9 +129,9 @@ public class MerchantService {
         if(!findMerchant(input)){
             ErrorView.wrongInput();
         } else {
-            viewM.headerInfo("Ubah status toko");
-            infoMerchant();
-            viewM.statusOption();
+            MerchantView.headerInfo("Ubah status toko");
+            infoMerchantSelected();
+            MerchantView.statusOption();
             try {
                 int set = c.inputInt();
                 switch (set){
@@ -153,8 +148,9 @@ public class MerchantService {
         if(!findMerchant(inputMerchant)){
             ErrorView.wrongInput();
         } else {
-            viewM.headerInfo("Hapus toko");
-            infoMerchant();
+            MerchantView.headerInfo("Hapus toko");
+            infoMerchantSelected();
+            MerchantView.cancel("toko");
             while (true){
                 String input = c.inputLine();
                 if (input.equals("y")) {
@@ -167,61 +163,7 @@ public class MerchantService {
         }
     }
     //==================================================================================
-    public void createProduct(int input){
-        findMerchant(input);
-        viewM.headerInfo("Pembuatan produk baru");
-        infoMerchant();
-        viewM.cancelOption();
-        viewM.fieldProductName();
-        String name = c.inputLine();
-        if (name.equals("x")){
-            viewM.infoCreateFail("produk");
-        } else {
-            viewM.fieldProductPrice();
-            Integer price = c.inputInt();
-            if (price.equals("x")){
-                viewM.infoCreateFail("produk");
-            } else {
-                //save repo
-                Product pd = new Product();
-                pd.setProduct_name(name);
-                pd.setPrice(price);
-                pd.setMerchant(thisMerchant);
-                selectType(pd);
-                pd.setProductTypes(productTypesSelected);
-                saveProduct(pd);
-                productTypesSelected.clear();
-                viewM.infoCreateOK("Produk");
-            }
-        }
-    }
-    public List<ProductType> productTypesSelected = new ArrayList<>();
-    public void selectType(Product pd){
-        boolean active = true;
-        while(active){
-            MerchantView.selectedID(productTypesSelected);
-            MerchantView.inputTypeID(getAllType());
-            int input = c.inputInt();
-            if(input==0){
-                active=false;
-            } else {
-                ProductType pt = getByID(input);
-                productTypesSelected.add(pt);
-                pt.setProducts(Arrays.asList(pd));
-            }
-        }
-    }
-    public void initiateProductType(){
-        if(productTypeRepository.count()==0){
-            productTypeRepository.save(new ProductType().setName("Minuman Dingin"));
-            productTypeRepository.save(new ProductType().setName("Minuman Panas"));
-            productTypeRepository.save(new ProductType().setName("Kopi"));
-            productTypeRepository.save(new ProductType().setName("Nasi"));
-            productTypeRepository.save(new ProductType().setName("Kue"));
-            productTypeRepository.save(new ProductType().setName("Manis"));
-            productTypeRepository.save(new ProductType().setName("Pedas"));
-        }
-    }
+
 
     public void updateMerchant(UUID id, String name, String loc){
         merchantRepository.updateMerchant(id, name, loc);
@@ -236,27 +178,6 @@ public class MerchantService {
         return merchantRepository.findByUsers(user);
     }
     //========================================================================================
-    public void saveProduct(Product product){
-        productRepository.save(product);
-    }
-    public List<Product> getAllProduct(){
-        return productRepository.findAll();
-    }
-    public List<Product> getOpenMerchants() {
-        return productRepository.findOpenMerchantProducts();
-    }
-    public List<Product> filterProductsByName(String name) {
-        return productRepository.findProductByName(name);
-    }
-    public List<Product> filterProductsByProductType(Integer id) {
-        return productRepository.findByProductTypesId(id);
-    }
-    public List<ProductType> getAllType(){
-        return productTypeRepository.findAll();
-    }
-    public ProductType getByID(int id){
-        Optional<ProductType> productType = productTypeRepository.findById(id);
-        return productType.orElse(null);
-    }
+
 }
 
