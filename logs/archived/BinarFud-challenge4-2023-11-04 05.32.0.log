@@ -1,0 +1,1 @@
+2023-11-04 05:32:39,723 WARN o.s.w.s.h.AbstractHandlerExceptionResolver [http-nio-8080-exec-6] Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'filterCriteria' for method parameter type String is not present]

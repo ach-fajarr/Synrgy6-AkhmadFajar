@@ -1,0 +1,4 @@
+2023-11-04 08:42:58,143 INFO o.s.b.StartupInfoLogger [restartedMain] Starting ChallengeApplication using Java 20.0.1 with PID 5668 (C:\Users\FAJAR\Downloads\Belajar Java\challenge\challenge\target\classes started by FAJAR in C:\Users\FAJAR\Downloads\Belajar Java\challenge\challenge)
+2023-11-04 08:42:58,175 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-11-04 08:42:58,325 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-11-04 08:42:58,326 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
