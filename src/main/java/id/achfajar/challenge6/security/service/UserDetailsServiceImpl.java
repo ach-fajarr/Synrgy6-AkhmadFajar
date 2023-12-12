@@ -22,7 +22,6 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         return UserDetailsImpl.build(user);
     }
 
-    //TODO ==============
     public void createUserPostLogin(String name, String email) {
         userRepository.findByUsername(email)
                 .orElse(new Users().setFirstName(name).setEmail(email).setUsername(email));

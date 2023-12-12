@@ -70,7 +70,6 @@ public class WebSecurityConfig {
                                                                 HttpServletResponse response,
                                                                 Authentication authentication) throws IOException, ServletException {
                                 DefaultOidcUser oidcUser = (DefaultOidcUser) authentication.getPrincipal();
-                                //TODO
                                 userDetailsService.createUserPostLogin(oidcUser.getAttribute("username"),
                                         oidcUser.getAttribute("email"));
 
