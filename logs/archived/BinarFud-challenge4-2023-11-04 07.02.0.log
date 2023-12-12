@@ -18,8 +18,8 @@
 2023-11-04 07:02:26,547 INFO c.z.h.p.HikariPool [restartedMain] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@732455c
 2023-11-04 07:02:26,560 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
 2023-11-04 07:02:26,846 WARN o.h.e.j.d.i.DialectFactoryImpl [restartedMain] HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2023-11-04 07:02:28,781 ERROR o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Failed to initialize JPA EntityManagerFactory: Collection 'id.achfajar.challenge5.model.ProductType.products' is 'mappedBy' a property named 'productTypes' which does not exist in the target entity 'id.achfajar.challenge5.model.Product'
-2023-11-04 07:02:28,784 WARN o.s.c.s.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Collection 'id.achfajar.challenge5.model.ProductType.products' is 'mappedBy' a property named 'productTypes' which does not exist in the target entity 'id.achfajar.challenge5.model.Product'
+2023-11-04 07:02:28,781 ERROR o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Failed to initialize JPA EntityManagerFactory: Collection 'id.achfajar.challenge6.model.ProductType.products' is 'mappedBy' a property named 'productTypes' which does not exist in the target entity 'id.achfajar.challenge6.model.Product'
+2023-11-04 07:02:28,784 WARN o.s.c.s.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Collection 'id.achfajar.challenge6.model.ProductType.products' is 'mappedBy' a property named 'productTypes' which does not exist in the target entity 'id.achfajar.challenge6.model.Product'
 2023-11-04 07:02:28,788 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Shutdown initiated...
 2023-11-04 07:02:28,896 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Shutdown completed.
 2023-11-04 07:02:28,904 INFO o.a.j.l.DirectJDKLog [restartedMain] Stopping service [Tomcat]
@@ -27,7 +27,7 @@
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
 2023-11-04 07:02:29,009 ERROR o.s.b.SpringApplication [restartedMain] Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Collection 'id.achfajar.challenge5.model.ProductType.products' is 'mappedBy' a property named 'productTypes' which does not exist in the target entity 'id.achfajar.challenge5.model.Product'
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Collection 'id.achfajar.challenge6.model.ProductType.products' is 'mappedBy' a property named 'productTypes' which does not exist in the target entity 'id.achfajar.challenge6.model.Product'
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
@@ -44,11 +44,11 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
-	at id.achfajar.challenge5.ChallengeApplication.main(ChallengeApplication.java:10)
+	at id.achfajar.challenge6.ChallengeApplication.main(ChallengeApplication.java:10)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
-Caused by: org.hibernate.AnnotationException: Collection 'id.achfajar.challenge5.model.ProductType.products' is 'mappedBy' a property named 'productTypes' which does not exist in the target entity 'id.achfajar.challenge5.model.Product'
+Caused by: org.hibernate.AnnotationException: Collection 'id.achfajar.challenge6.model.ProductType.products' is 'mappedBy' a property named 'productTypes' which does not exist in the target entity 'id.achfajar.challenge6.model.Product'
 	at org.hibernate.boot.model.internal.CollectionBinder.isReversePropertyInJoin(CollectionBinder.java:1569)
 	at org.hibernate.boot.model.internal.CollectionBinder.noAssociationTable(CollectionBinder.java:1583)
 	at org.hibernate.boot.model.internal.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:1544)
