@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="59a44654-52dd-4840-a4e8-5420a8cc8cd0">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<field name="merchantName" class="java.lang.String"/>
+	<field name="merchantLoc" class="java.lang.String"/>
+	<field name="periodeInfo" class="java.lang.String"/>
+	<field name="productName" class="java.lang.String"/>
+	<field name="orderTime" class="java.lang.String"/>
+	<field name="totalOrder" class="java.lang.Integer"/>
+	<field name="totalPrice" class="java.lang.Integer"/>
+	<field name="grandTotalOrder" class="java.lang.Integer"/>
+	<field name="grandTotalRevenue" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="80" splitType="Stretch">
+			<rectangle>
+				<reportElement x="-20" y="-20" width="595" height="98" backcolor="#DE1698" uuid="f5de7bf8-64f4-4fec-a7a5-cf5c66d5d017"/>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+			<textField>
+				<reportElement x="350" y="-1" width="185" height="60" forecolor="#EDEDED" uuid="7901a41c-f573-4dc2-9fc0-ec4668474390"/>
+				<textElement textAlignment="Right" markup="styled">
+					<font fontName="Adobe Gothic Std B" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{merchantName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="10" width="210" height="60" forecolor="#FFFFFF" uuid="c1fee63f-1cba-4a56-92e5-a06f4df896f2"/>
+				<box>
+					<pen lineWidth="0.0"/>
+				</box>
+				<textElement markup="styled">
+					<font fontName="Franklin Gothic Demi" size="26" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BINAR FUD]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="40" width="189" height="30" forecolor="#FFFFFF" uuid="a6be6a6c-4acc-477f-9f8f-b0777d2a0cb5"/>
+				<textElement markup="styled">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Merchant revenue report]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="395" y="40" width="140" height="30" forecolor="#EDEDED" uuid="3f06ea56-5f05-45bc-8832-0ae7b248fc77"/>
+				<textElement textAlignment="Right" markup="styled">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{merchantLoc}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="44" splitType="Stretch">
+			<textField>
+				<reportElement x="120" y="10" width="100" height="22" uuid="978d6489-8a24-4b4a-849d-5c5c88018ff6"/>
+				<textElement verticalAlignment="Middle" markup="styled">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{periodeInfo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="5" y="10" width="125" height="22" uuid="ba2f4831-a080-49d0-8041-bec4c519de0f"/>
+				<textElement verticalAlignment="Middle" markup="styled">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Periode	:  ]]></text>
+			</staticText>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" isPrintRepeatedValues="false" mode="Transparent" x="-130" y="40" width="1500" height="1" backcolor="#030000" uuid="9eea7dc5-426e-4763-8115-e2f67f632c29">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="1.0" lineColor="#2B2B2B"/>
+				</graphicElement>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="20" y="0" width="165" height="35" backcolor="#FFFFFF" uuid="b3ff5904-dc05-43d8-8206-394069dba970">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement markup="styled">
+					<font fontName="Adobe Fan Heiti Std B" size="12"/>
+				</textElement>
+				<text><![CDATA[Product Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="185" y="0" width="165" height="35" backcolor="#FFFFFF" uuid="2965f615-a2c3-4643-890e-33ce48451e22">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement markup="styled">
+					<font fontName="Adobe Fan Heiti Std B" size="12"/>
+				</textElement>
+				<text><![CDATA[Order Time]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="350" y="0" width="93" height="35" backcolor="#FFFFFF" uuid="f82c5d3b-f34c-4268-8ae9-6dcdc51872fd">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement markup="styled">
+					<font fontName="Adobe Fan Heiti Std B" size="12"/>
+				</textElement>
+				<text><![CDATA[Total Order]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="443" y="0" width="92" height="35" backcolor="#FFFFFF" uuid="4fa02bdf-7fd5-43b2-be1a-867cc246c1ee">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement markup="styled">
+					<font fontName="Adobe Fan Heiti Std B" size="12"/>
+				</textElement>
+				<text><![CDATA[Total Price]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField>
+				<reportElement x="20" y="0" width="165" height="30" uuid="eb0c1d20-e603-43d3-b029-a4878a7cb7c4"/>
+				<textElement verticalAlignment="Middle" markup="styled">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{productName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="185" y="0" width="165" height="30" uuid="3edd8dce-c2b6-4450-8a97-3ed981bfebe1"/>
+				<textElement verticalAlignment="Middle" markup="styled">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{orderTime}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="350" y="0" width="93" height="30" uuid="16ce9615-6d71-4238-83e8-95c31529ab0e"/>
+				<textElement verticalAlignment="Middle" markup="styled">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalOrder}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="443" y="0" width="92" height="30" uuid="fce9d3cf-4244-45ab-ac74-33bb6810ce80"/>
+				<textElement verticalAlignment="Middle" markup="styled">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalPrice}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="32" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField>
+				<reportElement x="350" y="1" width="93" height="30" uuid="cbad5e18-86dd-42e9-a962-6a68fb2748b2"/>
+				<textElement verticalAlignment="Middle" markup="styled">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{grandTotalOrder}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="443" y="1" width="91" height="30" uuid="22d4840a-9b4e-4a11-b9e3-bad750d42db7"/>
+				<textElement verticalAlignment="Middle" markup="styled">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{grandTotalRevenue}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="1" width="165" height="30" backcolor="#FFFFFF" uuid="0c44f242-a5c7-4be1-8b4d-58a552498a66">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle" markup="styled">
+					<font fontName="SansSerif" size="12"/>
+				</textElement>
+				<text><![CDATA[Grand Total]]></text>
+			</staticText>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" isPrintRepeatedValues="false" mode="Transparent" x="10" y="-2" width="535" height="1" backcolor="#030000" uuid="bf7c151a-ce11-4539-af6f-bd446742500b">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="1.0" lineColor="#2B2B2B"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

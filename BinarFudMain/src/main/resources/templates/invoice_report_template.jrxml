@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Invoice Report" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="04f21d91-96f1-4cf5-8223-5e5c7e276afc">
+	<field name="merchantName" class="java.lang.String"/>
+	<field name="productName" class="java.lang.String"/>
+	<field name="orderTime" class="java.time.LocalDateTime"/>
+	<field name="totalOrder" class="java.lang.Integer"/>
+	<field name="totalPrice" class="java.lang.Integer"/>
+	<field name="grandTotalOrder" class="java.lang.Integer"/>
+	<field name="grandTotalRevenue" class="java.lang.Integer"/>
+<title>
+			<band height="79" splitType="Stretch">
+				<textField>
+					<reportElement x="0" y="0" width="555" height="30" uuid="d6fbcd46-64b5-4dd9-83f1-37059d4d8bc3"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{merchantName}]]></textFieldExpression>
+				</textField>
+			</band>
+		</title>
+		<columnHeader>
+			<band height="30" splitType="Stretch">
+				<staticText>
+					<reportElement x="0" y="0" width="185" height="30" uuid="e559c670-c05e-4c34-968c-3b158037513f"/>
+					<text><![CDATA[Product Name]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="185" y="0" width="185" height="30" uuid="a8dd8d60-b180-403b-bc64-0579c3f5643e"/>
+					<text><![CDATA[Order Time]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="370" y="0" width="93" height="30" uuid="4e073e3f-ec4e-4cb6-b659-c4ad6c9cda76"/>
+					<text><![CDATA[Total Order]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="463" y="0" width="92" height="30" uuid="1e531f56-2ed4-47ec-92c5-df3e818c4a5a"/>
+					<text><![CDATA[Total Price]]></text>
+				</staticText>
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="30" splitType="Stretch">
+				<textField>
+					<reportElement x="0" y="0" width="185" height="30" uuid="3322b6ea-909e-4044-9387-9d1e856299b7"/>
+					<textFieldExpression><![CDATA[$F{productName}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="185" y="0" width="185" height="30" uuid="b28b40e2-4a2a-4e5f-8e4d-903e1c2a930d"/>
+					<textFieldExpression><![CDATA[$F{orderTime}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="370" y="0" width="93" height="30" uuid="22aefc1d-19ea-4f8d-a20c-7e38c848b9f0"/>
+					<textFieldExpression><![CDATA[$F{totalOrder}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="463" y="0" width="92" height="30" uuid="87a62a77-c153-48e2-a3f7-82c5c8724b09"/>
+					<textFieldExpression><![CDATA[$F{totalPrice}]]></textFieldExpression>
+				</textField>
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="45" splitType="Stretch">
+				<textField>
+					<reportElement x="370" y="0" width="93" height="30" uuid="f2af9351-15b8-45f9-89f4-9a4b614860d7"/>
+					<textFieldExpression><![CDATA[$F{grandTotalOrder}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="463" y="0" width="92" height="30" uuid="e7dd0f1c-bf07-45c8-b4cc-3ecf6d3c9231"/>
+					<textFieldExpression><![CDATA[$F{grandTotalRevenue}]]></textFieldExpression>
+				</textField>
+			</band>
+		</columnFooter>
+	</jasperReport>

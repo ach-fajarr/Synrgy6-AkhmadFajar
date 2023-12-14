@@ -1,0 +1,1 @@
+2023-11-04 07:22:59,812 WARN o.s.w.s.h.AbstractHandlerExceptionResolver [http-nio-8080-exec-4] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'multipart/form-data;boundary=--------------------------363949171815769989356784;charset=UTF-8' is not supported]

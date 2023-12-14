@@ -1,0 +1,2 @@
+2023-11-04 07:44:39,796 WARN o.s.w.s.m.m.a.ResponseEntityExceptionHandler [http-nio-8080-exec-5] Request method 'POST' is not supported
+2023-11-04 07:44:39,804 WARN o.s.w.s.h.AbstractHandlerExceptionResolver [http-nio-8080-exec-5] Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
