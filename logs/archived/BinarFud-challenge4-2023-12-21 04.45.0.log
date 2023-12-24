@@ -1,0 +1,18 @@
+2023-12-21 16:45:13,604 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2023-12-21 16:45:14,738 INFO o.s.b.StartupInfoLogger [restartedMain] Starting ChallengeApplication using Java 20.0.1 with PID 17780 (C:\Users\FAJAR\Downloads\Belajar Java\Challenge_7\BinarFudMain\target\classes started by FAJAR in C:\Users\FAJAR\Downloads\Belajar Java\Challenge_7)
+2023-12-21 16:45:14,751 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-12-21 16:45:15,522 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-21 16:45:15,525 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-12-21 16:45:28,386 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-21 16:45:29,729 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 1217 ms. Found 6 JPA repository interfaces.
+2023-12-21 16:45:42,203 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-12-21 16:45:42,330 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-21 16:45:42,349 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2023-12-21 16:45:42,351 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-12-21 16:45:45,283 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-12-21 16:45:45,296 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 29741 ms
+2023-12-21 16:45:51,379 INFO o.h.j.i.u.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-21 16:45:53,481 INFO o.h.Version [restartedMain] HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-12-21 16:45:53,502 INFO o.h.c.Environment [restartedMain] HHH000406: Using bytecode reflection optimizer
+2023-12-21 16:45:57,931 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-21 16:45:58,449 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Starting...

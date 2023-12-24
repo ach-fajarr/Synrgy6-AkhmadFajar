@@ -1,0 +1,44 @@
+2023-12-20 13:34:00,267 INFO o.s.d.j.r.q.QueryEnhancerFactory [restartedMain] Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-12-20 13:34:03,528 INFO c.c.s.SocketIOServer [restartedMain] Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2023-12-20 13:34:04,213 INFO c.c.s.SocketIOServer$1 [nioEventLoopGroup-2-1] SocketIO server started at port: 8085
+2023-12-20 13:34:04,575 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-20 13:34:07,801 INFO o.s.b.a.e.w.EndpointLinksResolver [restartedMain] Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-20 13:34:08,082 INFO o.s.s.w.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4859eef8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@621b74cb, org.springframework.security.web.context.SecurityContextHolderFilter@40463bbf, org.springframework.security.web.header.HeaderWriterFilter@568f6cd1, org.springframework.security.web.authentication.logout.LogoutFilter@2453b549, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@8fd7301, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@3d72f353, id.achfajar.challenge8.security.jwt.AuthTokenFilter@2f4c8a7f, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1aa5e3e0, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@669f8315, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@89d3947, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@13ac975e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2ee2f8d8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5c396590, org.springframework.security.web.session.SessionManagementFilter@5c19dd94, org.springframework.security.web.access.ExceptionTranslationFilter@5110b20d, org.springframework.security.web.access.intercept.AuthorizationFilter@240740b7]
+2023-12-20 13:34:09,169 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-12-20 13:34:09,428 WARN o.s.c.s.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'compositeCompatibilityVerifier' defined in class path resource [org/springframework/cloud/configuration/CompatibilityVerifierAutoConfiguration.class]: Failed to instantiate [org.springframework.cloud.configuration.CompositeCompatibilityVerifier]: Factory method 'compositeCompatibilityVerifier' threw exception with message: Spring Cloud/ Spring Boot version compatibility checks have failed: [[VerificationResult@26d6bba8 description = 'Spring Boot [3.1.5] is not compatible with this Spring Cloud release train', action = 'Change Spring Boot version to one of the following versions [3.2.x] .
+You can find the latest Spring Boot versions here [https://spring.io/projects/spring-boot#learn]. 
+If you want to learn more about the Spring Cloud Release train compatibility, you can visit this page [https://spring.io/projects/spring-cloud#overview] and check the [Release Trains] section.
+If you want to disable this check, just set the property [spring.cloud.compatibility-verifier.enabled=false]']]
+2023-12-20 13:34:09,443 INFO c.c.s.SocketIOServer [restartedMain] Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2023-12-20 13:34:10,071 ERROR c.c.s.SocketIOServer$1 [nioEventLoopGroup-4-1] SocketIO server start failed at port: 8085!
+2023-12-20 13:34:10,072 WARN o.s.b.f.a.InitDestroyAnnotationBeanPostProcessor [restartedMain] Destroy method on bean with name 'socketIOConfiguration' threw an exception: java.net.BindException: Address already in use: bind
+2023-12-20 13:34:10,078 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-20 13:34:10,085 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Shutdown initiated...
+2023-12-20 13:34:10,102 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Shutdown completed.
+2023-12-20 13:34:10,113 INFO o.a.j.l.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2023-12-20 13:34:10,439 INFO o.s.b.a.l.ConditionEvaluationReportLogger [restartedMain] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-12-20 13:34:10,636 ERROR o.s.b.d.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Your project setup is incompatible with our requirements due to following reasons:
+
+- Spring Boot [3.1.5] is not compatible with this Spring Cloud release train
+
+
+Action:
+
+Consider applying the following actions:
+
+- Change Spring Boot version to one of the following versions [3.2.x] .
+You can find the latest Spring Boot versions here [https://spring.io/projects/spring-boot#learn]. 
+If you want to learn more about the Spring Cloud Release train compatibility, you can visit this page [https://spring.io/projects/spring-cloud#overview] and check the [Release Trains] section.
+If you want to disable this check, just set the property [spring.cloud.compatibility-verifier.enabled=false]
+
+

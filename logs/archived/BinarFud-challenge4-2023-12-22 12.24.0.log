@@ -1,0 +1,24 @@
+2023-12-22 00:24:12,772 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2023-12-22 00:24:13,733 INFO o.s.b.StartupInfoLogger [restartedMain] Starting ChallengeApplication using Java 20.0.1 with PID 3468 (C:\Users\FAJAR\Downloads\Belajar Java\Challenge_7\BinarFudMain\target\classes started by FAJAR in C:\Users\FAJAR\Downloads\Belajar Java\Challenge_7)
+2023-12-22 00:24:13,753 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-12-22 00:24:14,382 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-22 00:24:14,504 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-12-22 00:24:24,403 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-22 00:24:25,363 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 875 ms. Found 6 JPA repository interfaces.
+2023-12-22 00:24:34,288 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-12-22 00:24:34,361 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-22 00:24:34,383 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2023-12-22 00:24:34,385 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-12-22 00:24:35,239 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-12-22 00:24:35,252 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 20734 ms
+2023-12-22 00:24:36,711 INFO o.h.j.i.u.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-22 00:24:37,247 INFO o.h.Version [restartedMain] HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-12-22 00:24:37,271 INFO o.h.c.Environment [restartedMain] HHH000406: Using bytecode reflection optimizer
+2023-12-22 00:24:39,629 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-22 00:24:39,869 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2023-12-22 00:24:41,845 INFO c.z.h.p.HikariPool [restartedMain] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@600e9945
+2023-12-22 00:24:41,860 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2023-12-22 00:24:42,186 WARN o.h.e.j.d.i.DialectFactoryImpl [restartedMain] HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-12-22 00:24:53,466 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-22 00:24:54,838 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-22 00:24:59,440 INFO i.a.c.c.InitializatorConfig [restartedMain] Firebase application has been initialized

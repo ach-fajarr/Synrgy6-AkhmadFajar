@@ -1,0 +1,1 @@
+2023-11-04 07:47:46,150 WARN o.s.w.s.h.AbstractHandlerExceptionResolver [http-nio-8080-exec-2] Resolved [id.achfajar.challenge6.exception.ResourceNotFoundException: Product not found with id: eb5c3583-71da-4154-ae9d-faa48cbababa]

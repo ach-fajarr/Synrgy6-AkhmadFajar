@@ -1,0 +1,7 @@
+2023-11-04 08:00:00,623 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-11-04 08:00:00,690 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2023-11-04 08:00:00,797 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-04 08:00:01,012 INFO o.s.b.StartupInfoLogger [restartedMain] Started ChallengeApplication in 18.721 seconds (process running for 20.808)
+2023-11-04 08:00:18,525 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-04 08:00:18,526 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-11-04 08:00:18,532 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 4 ms

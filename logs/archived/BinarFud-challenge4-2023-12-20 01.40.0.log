@@ -1,0 +1,103 @@
+2023-12-20 13:40:00,865 INFO o.f.c.i.l.s.Slf4jLog [restartedMain] Database: jdbc:postgresql://localhost:5432/challenge8 (PostgreSQL 16.0)
+2023-12-20 13:40:00,932 WARN o.f.c.i.l.s.Slf4jLog [restartedMain] Flyway upgrade recommended: PostgreSQL 16.0 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 15.
+2023-12-20 13:40:01,235 INFO o.f.c.i.l.s.Slf4jLog [restartedMain] Successfully validated 1 migration (execution time 00:00.167s)
+2023-12-20 13:40:01,809 INFO o.f.c.i.l.s.Slf4jLog [restartedMain] Current version of schema "migrations": null
+2023-12-20 13:40:01,814 INFO o.f.c.i.l.s.Slf4jLog [restartedMain] Schema "migrations" is up to date. No migration necessary.
+2023-12-20 13:40:02,616 INFO o.h.j.i.u.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-20 13:40:02,846 INFO o.h.Version [restartedMain] HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-12-20 13:40:02,858 INFO o.h.c.Environment [restartedMain] HHH000406: Using bytecode reflection optimizer
+2023-12-20 13:40:04,198 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-20 13:40:04,333 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2023-12-20 13:40:04,542 INFO c.z.h.p.HikariPool [restartedMain] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6eda2804
+2023-12-20 13:40:04,549 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2023-12-20 13:40:04,678 WARN o.h.e.j.d.i.DialectFactoryImpl [restartedMain] HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-12-20 13:40:14,572 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-20 13:40:15,129 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-20 13:40:20,585 INFO o.s.d.j.r.q.QueryEnhancerFactory [restartedMain] Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-12-20 13:40:23,956 INFO c.c.s.SocketIOServer [restartedMain] Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2023-12-20 13:40:25,901 INFO c.c.s.SocketIOServer$1 [nioEventLoopGroup-2-1] SocketIO server started at port: 8085
+2023-12-20 13:40:26,983 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-20 13:40:32,248 INFO o.s.b.a.e.w.EndpointLinksResolver [restartedMain] Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-20 13:40:32,869 INFO o.s.s.w.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6f9578a5, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@141d49e4, org.springframework.security.web.context.SecurityContextHolderFilter@5676dd64, org.springframework.security.web.header.HeaderWriterFilter@23b0e1ca, org.springframework.security.web.authentication.logout.LogoutFilter@18f5cb7e, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@2f58386e, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@3e08bf6c, id.achfajar.challenge8.security.jwt.AuthTokenFilter@139476dd, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4fa9eab5, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@7a724bbc, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@78d61e94, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5dff9108, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@745f305e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7c6fff62, org.springframework.security.web.session.SessionManagementFilter@64aa470e, org.springframework.security.web.access.ExceptionTranslationFilter@1d64cd93, org.springframework.security.web.access.intercept.AuthorizationFilter@4c4c9f1a]
+2023-12-20 13:40:34,770 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-12-20 13:40:35,512 INFO o.a.k.c.c.AbstractConfig [restartedMain] AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2023-12-20 13:40:38,792 INFO o.a.k.c.u.AppInfoParser$AppInfo [restartedMain] Kafka version: 3.4.1
+2023-12-20 13:40:38,796 INFO o.a.k.c.u.AppInfoParser$AppInfo [restartedMain] Kafka commitId: 8a516edc2755df89
+2023-12-20 13:40:38,798 INFO o.a.k.c.u.AppInfoParser$AppInfo [restartedMain] Kafka startTimeMs: 1703054438787
+2023-12-20 13:40:41,367 INFO o.a.k.c.u.AppInfoParser [kafka-admin-client-thread | adminclient-1] App info kafka.admin.client for adminclient-1 unregistered
+2023-12-20 13:40:41,502 INFO o.a.k.c.m.Metrics [kafka-admin-client-thread | adminclient-1] Metrics scheduler closed
+2023-12-20 13:40:41,504 INFO o.a.k.c.m.Metrics [kafka-admin-client-thread | adminclient-1] Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-12-20 13:40:41,506 INFO o.a.k.c.m.Metrics [kafka-admin-client-thread | adminclient-1] Metrics reporters closed
+2023-12-20 13:40:41,543 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2023-12-20 13:40:41,736 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-20 13:40:41,968 INFO o.s.b.StartupInfoLogger [restartedMain] Started ChallengeApplication in 75.638 seconds (process running for 81.878)

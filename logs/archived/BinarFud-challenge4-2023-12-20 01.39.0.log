@@ -1,0 +1,16 @@
+2023-12-20 13:39:32,737 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2023-12-20 13:39:33,226 INFO o.s.b.StartupInfoLogger [restartedMain] Starting ChallengeApplication using Java 20.0.1 with PID 8120 (C:\Users\FAJAR\Downloads\Belajar Java\Challenge_7\BinarFudMain\target\classes started by FAJAR in C:\Users\FAJAR\Downloads\Belajar Java\Challenge_7)
+2023-12-20 13:39:33,262 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-12-20 13:39:33,939 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-20 13:39:33,943 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-12-20 13:39:47,402 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-20 13:39:49,071 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 1574 ms. Found 6 JPA repository interfaces.
+2023-12-20 13:39:56,822 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-12-20 13:39:56,854 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-20 13:39:56,862 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2023-12-20 13:39:56,863 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-12-20 13:39:57,239 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-12-20 13:39:57,244 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 23291 ms
+2023-12-20 13:39:58,597 INFO o.f.c.i.l.s.Slf4jLog [restartedMain] Flyway Community Edition 9.16.3 by Redgate
+2023-12-20 13:39:58,600 INFO o.f.c.i.l.s.Slf4jLog [restartedMain] See release notes here: https://rd.gt/416ObMi
+2023-12-20 13:39:58,601 INFO o.f.c.i.l.s.Slf4jLog [restartedMain] 

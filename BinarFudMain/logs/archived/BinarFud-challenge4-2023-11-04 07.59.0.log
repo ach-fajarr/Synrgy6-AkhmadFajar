@@ -1,0 +1,24 @@
+2023-11-04 07:59:43,994 INFO o.s.b.StartupInfoLogger [restartedMain] Starting ChallengeApplication using Java 20.0.1 with PID 4820 (C:\Users\FAJAR\Downloads\Belajar Java\challenge\challenge\target\classes started by FAJAR in C:\Users\FAJAR\Downloads\Belajar Java\challenge\challenge)
+2023-11-04 07:59:44,008 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-11-04 07:59:44,154 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-11-04 07:59:44,155 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-11-04 07:59:46,581 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-04 07:59:46,814 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 208 ms. Found 2 JPA repository interfaces.
+2023-11-04 07:59:49,038 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-11-04 07:59:49,059 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2023-11-04 07:59:49,066 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2023-11-04 07:59:49,068 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-11-04 07:59:49,276 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-11-04 07:59:49,286 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 5126 ms
+2023-11-04 07:59:50,224 INFO o.h.j.i.u.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-04 07:59:50,413 INFO o.h.Version [restartedMain] HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-11-04 07:59:50,419 INFO o.h.c.Environment [restartedMain] HHH000406: Using bytecode reflection optimizer
+2023-11-04 07:59:51,331 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-04 07:59:51,425 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2023-11-04 07:59:52,739 INFO c.z.h.p.HikariPool [restartedMain] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6d7bbfa9
+2023-11-04 07:59:52,748 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2023-11-04 07:59:52,933 WARN o.h.e.j.d.i.DialectFactoryImpl [restartedMain] HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-11-04 07:59:56,401 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-04 07:59:56,651 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-04 07:59:57,524 INFO o.s.d.j.r.q.QueryEnhancerFactory [restartedMain] Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-11-04 07:59:58,921 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning

@@ -1,0 +1,49 @@
+2023-12-20 15:02:00,004 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2023-12-20 15:02:00,054 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-20 15:02:00,100 INFO o.s.b.StartupInfoLogger [restartedMain] Started ChallengeApplication in 54.27 seconds (process running for 59.796)
+2023-12-20 15:02:12,452 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2023-12-20 15:02:12,768 INFO o.s.b.StartupInfoLogger [main] Starting EmailServiceApplication using Java 20.0.1 with PID 10892 (C:\Users\FAJAR\Downloads\Belajar Java\Challenge_7\EmailService\target\classes started by FAJAR in C:\Users\FAJAR\Downloads\Belajar Java\Challenge_7)
+2023-12-20 15:02:12,778 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-20 15:02:21,814 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-20 15:02:21,891 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 45 ms. Found 0 JPA repository interfaces.
+2023-12-20 15:02:29,127 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8080 (http)
+2023-12-20 15:02:29,159 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-20 15:02:29,168 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2023-12-20 15:02:29,169 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-20 15:02:29,429 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-12-20 15:02:29,432 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 16205 ms
+2023-12-20 15:02:31,738 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-20 15:02:32,763 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.3.1.Final
+2023-12-20 15:02:33,029 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2023-12-20 15:02:34,478 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-20 15:02:34,572 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-12-20 15:02:35,241 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5b55c3d6
+2023-12-20 15:02:35,247 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-12-20 15:02:35,364 WARN o.h.e.j.d.i.DialectFactoryImpl [main] HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-12-20 15:02:37,101 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-20 15:02:37,144 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-20 15:02:40,330 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-20 15:02:47,915 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-20 15:02:48,025 INFO o.s.s.w.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@19f9287a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4924ad09, org.springframework.security.web.context.SecurityContextHolderFilter@130ad58d, org.springframework.security.web.header.HeaderWriterFilter@52a3eba3, org.springframework.web.filter.CorsFilter@7e9d171c, org.springframework.security.web.csrf.CsrfFilter@171b0d3, org.springframework.security.web.authentication.logout.LogoutFilter@597eb9ac, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@156d7556, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@518ed9b4, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@3a1540be, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@153c69bc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5de32e00, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2279e7c7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6aff157e, org.springframework.security.web.access.ExceptionTranslationFilter@401b7226, org.springframework.security.web.access.intercept.AuthorizationFilter@3894d1b1]
+2023-12-20 15:02:52,393 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-12-20 15:02:52,416 WARN o.s.c.s.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2023-12-20 15:02:52,431 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-20 15:02:52,440 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Shutdown initiated...
+2023-12-20 15:02:52,467 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Shutdown completed.
+2023-12-20 15:02:52,572 INFO o.s.b.a.l.ConditionEvaluationReportLogger [main] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-12-20 15:02:52,636 ERROR o.s.b.d.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+

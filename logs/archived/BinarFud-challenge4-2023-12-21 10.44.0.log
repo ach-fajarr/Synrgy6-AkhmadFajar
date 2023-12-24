@@ -1,0 +1,11 @@
+2023-12-21 10:44:32,439 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2023-12-21 10:44:32,633 INFO o.s.b.StartupInfoLogger [main] Starting EmailServiceApplication using Java 20.0.1 with PID 2412 (C:\Users\FAJAR\Downloads\Belajar Java\Challenge_7\EmailService\target\classes started by FAJAR in C:\Users\FAJAR\Downloads\Belajar Java\Challenge_7)
+2023-12-21 10:44:32,637 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-21 10:44:50,659 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-21 10:44:50,793 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 68 ms. Found 0 JPA repository interfaces.
+2023-12-21 10:44:57,980 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8081 (http)
+2023-12-21 10:44:58,012 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8081"]
+2023-12-21 10:44:58,022 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2023-12-21 10:44:58,023 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-21 10:44:58,339 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-12-21 10:44:58,343 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 25487 ms

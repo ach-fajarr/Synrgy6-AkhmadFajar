@@ -1,0 +1,167 @@
+2023-12-21 10:33:04,342 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2023-12-21 10:33:04,656 INFO o.s.b.StartupInfoLogger [main] Starting EmailServiceApplication using Java 20.0.1 with PID 4264 (C:\Users\FAJAR\Downloads\Belajar Java\Challenge_7\EmailService\target\classes started by FAJAR in C:\Users\FAJAR\Downloads\Belajar Java\Challenge_7)
+2023-12-21 10:33:04,659 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-12-21 10:33:12,471 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-21 10:33:12,568 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 59 ms. Found 0 JPA repository interfaces.
+2023-12-21 10:33:19,359 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8081 (http)
+2023-12-21 10:33:19,427 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8081"]
+2023-12-21 10:33:19,452 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2023-12-21 10:33:19,465 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-21 10:33:21,388 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-12-21 10:33:21,396 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 16557 ms
+2023-12-21 10:33:23,547 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-21 10:33:24,095 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.3.1.Final
+2023-12-21 10:33:25,340 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2023-12-21 10:33:27,240 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-21 10:33:27,363 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-12-21 10:33:28,291 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@22368ddc
+2023-12-21 10:33:28,298 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-12-21 10:33:28,488 WARN o.h.e.j.d.i.DialectFactoryImpl [main] HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-12-21 10:33:31,740 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-21 10:33:31,815 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-21 10:33:33,799 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-21 10:33:40,893 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-12-21 10:33:41,606 INFO o.s.s.w.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5edce7da, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@f69e35a, org.springframework.security.web.context.SecurityContextHolderFilter@590ab84, org.springframework.security.web.header.HeaderWriterFilter@65a01901, org.springframework.web.filter.CorsFilter@6c2d124e, org.springframework.security.web.csrf.CsrfFilter@4ed74d03, org.springframework.security.web.authentication.logout.LogoutFilter@5ac35b17, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5352bc0e, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@419c70f6, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@602e7a9e, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@58ca1cad, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@65c66fc4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@423791, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@59f5a376, org.springframework.security.web.access.ExceptionTranslationFilter@4a49ce3a, org.springframework.security.web.access.intercept.AuthorizationFilter@122a6078]
+2023-12-21 10:33:44,768 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8081"]
+2023-12-21 10:33:44,833 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port 8081 (http) with context path '/email-service'
+2023-12-21 10:33:45,019 INFO o.a.k.c.c.AbstractConfig [main] ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-email-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = email
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2023-12-21 10:33:46,403 INFO o.a.k.c.u.AppInfoParser$AppInfo [main] Kafka version: 3.6.0
+2023-12-21 10:33:46,405 INFO o.a.k.c.u.AppInfoParser$AppInfo [main] Kafka commitId: 60e845626d8a465a
+2023-12-21 10:33:46,407 INFO o.a.k.c.u.AppInfoParser$AppInfo [main] Kafka startTimeMs: 1703129626393
+2023-12-21 10:33:46,529 INFO o.a.k.c.c.KafkaConsumer [main] [Consumer clientId=consumer-email-1, groupId=email] Subscribed to topic(s): email-service
+2023-12-21 10:33:46,865 INFO o.s.b.StartupInfoLogger [main] Started EmailServiceApplication in 46.504 seconds (process running for 50.349)
+2023-12-21 10:33:48,579 INFO o.a.k.c.NetworkClient [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [Consumer clientId=consumer-email-1, groupId=email] Node -1 disconnected.
+2023-12-21 10:33:48,585 WARN o.a.k.c.NetworkClient [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [Consumer clientId=consumer-email-1, groupId=email] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-12-21 10:33:48,587 WARN o.a.k.c.NetworkClient$DefaultMetadataUpdater [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [Consumer clientId=consumer-email-1, groupId=email] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-12-21 10:33:48,688 INFO o.a.k.c.NetworkClient [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [Consumer clientId=consumer-email-1, groupId=email] Node -1 disconnected.
+2023-12-21 10:33:48,689 WARN o.a.k.c.NetworkClient [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [Consumer clientId=consumer-email-1, groupId=email] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-12-21 10:33:48,690 WARN o.a.k.c.NetworkClient$DefaultMetadataUpdater [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [Consumer clientId=consumer-email-1, groupId=email] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-12-21 10:33:48,800 INFO o.a.k.c.NetworkClient [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [Consumer clientId=consumer-email-1, groupId=email] Node -1 disconnected.
+2023-12-21 10:33:48,801 WARN o.a.k.c.NetworkClient [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [Consumer clientId=consumer-email-1, groupId=email] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-12-21 10:33:48,802 WARN o.a.k.c.NetworkClient$DefaultMetadataUpdater [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [Consumer clientId=consumer-email-1, groupId=email] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-12-21 10:33:49,040 INFO o.a.k.c.NetworkClient [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [Consumer clientId=consumer-email-1, groupId=email] Node -1 disconnected.
+2023-12-21 10:33:49,041 WARN o.a.k.c.NetworkClient [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [Consumer clientId=consumer-email-1, groupId=email] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-12-21 10:33:49,042 WARN o.a.k.c.NetworkClient$DefaultMetadataUpdater [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [Consumer clientId=consumer-email-1, groupId=email] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-12-21 10:33:49,534 INFO o.a.k.c.NetworkClient [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [Consumer clientId=consumer-email-1, groupId=email] Node -1 disconnected.
+2023-12-21 10:33:49,535 WARN o.a.k.c.NetworkClient [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [Consumer clientId=consumer-email-1, groupId=email] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-12-21 10:33:49,536 WARN o.a.k.c.NetworkClient$DefaultMetadataUpdater [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [Consumer clientId=consumer-email-1, groupId=email] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-12-21 10:33:50,346 INFO o.a.k.c.NetworkClient [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [Consumer clientId=consumer-email-1, groupId=email] Node -1 disconnected.
+2023-12-21 10:33:50,347 WARN o.a.k.c.NetworkClient [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [Consumer clientId=consumer-email-1, groupId=email] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-12-21 10:33:50,348 WARN o.a.k.c.NetworkClient$DefaultMetadataUpdater [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [Consumer clientId=consumer-email-1, groupId=email] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-12-21 10:33:51,355 INFO o.a.k.c.NetworkClient [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [Consumer clientId=consumer-email-1, groupId=email] Node -1 disconnected.
+2023-12-21 10:33:51,358 WARN o.a.k.c.NetworkClient [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [Consumer clientId=consumer-email-1, groupId=email] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-12-21 10:33:51,360 WARN o.a.k.c.NetworkClient$DefaultMetadataUpdater [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [Consumer clientId=consumer-email-1, groupId=email] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-12-21 10:33:52,554 INFO o.a.k.c.NetworkClient [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [Consumer clientId=consumer-email-1, groupId=email] Node -1 disconnected.
+2023-12-21 10:33:52,560 WARN o.a.k.c.NetworkClient [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [Consumer clientId=consumer-email-1, groupId=email] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-12-21 10:33:52,561 WARN o.a.k.c.NetworkClient$DefaultMetadataUpdater [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [Consumer clientId=consumer-email-1, groupId=email] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-12-21 10:33:53,750 INFO o.a.k.c.NetworkClient [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [Consumer clientId=consumer-email-1, groupId=email] Node -1 disconnected.
+2023-12-21 10:33:53,751 WARN o.a.k.c.NetworkClient [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [Consumer clientId=consumer-email-1, groupId=email] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-12-21 10:33:53,752 WARN o.a.k.c.NetworkClient$DefaultMetadataUpdater [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [Consumer clientId=consumer-email-1, groupId=email] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-12-21 10:33:54,816 INFO o.a.k.c.NetworkClient [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [Consumer clientId=consumer-email-1, groupId=email] Node -1 disconnected.
+2023-12-21 10:33:54,818 WARN o.a.k.c.NetworkClient [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [Consumer clientId=consumer-email-1, groupId=email] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-12-21 10:33:54,818 WARN o.a.k.c.NetworkClient$DefaultMetadataUpdater [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [Consumer clientId=consumer-email-1, groupId=email] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-12-21 10:33:55,969 INFO o.a.k.c.NetworkClient [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [Consumer clientId=consumer-email-1, groupId=email] Node -1 disconnected.
+2023-12-21 10:33:55,976 WARN o.a.k.c.NetworkClient [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [Consumer clientId=consumer-email-1, groupId=email] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-12-21 10:33:55,984 WARN o.a.k.c.NetworkClient$DefaultMetadataUpdater [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [Consumer clientId=consumer-email-1, groupId=email] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-12-21 10:33:57,008 INFO o.a.k.c.NetworkClient [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [Consumer clientId=consumer-email-1, groupId=email] Node -1 disconnected.
+2023-12-21 10:33:57,011 WARN o.a.k.c.NetworkClient [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [Consumer clientId=consumer-email-1, groupId=email] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-12-21 10:33:57,014 WARN o.a.k.c.NetworkClient$DefaultMetadataUpdater [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [Consumer clientId=consumer-email-1, groupId=email] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-12-21 10:33:58,223 INFO o.a.k.c.NetworkClient [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [Consumer clientId=consumer-email-1, groupId=email] Node -1 disconnected.
+2023-12-21 10:33:58,225 WARN o.a.k.c.NetworkClient [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [Consumer clientId=consumer-email-1, groupId=email] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-12-21 10:33:58,228 WARN o.a.k.c.NetworkClient$DefaultMetadataUpdater [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [Consumer clientId=consumer-email-1, groupId=email] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-12-21 10:33:59,109 INFO o.a.k.c.NetworkClient [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [Consumer clientId=consumer-email-1, groupId=email] Node -1 disconnected.
+2023-12-21 10:33:59,110 WARN o.a.k.c.NetworkClient [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [Consumer clientId=consumer-email-1, groupId=email] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-12-21 10:33:59,112 WARN o.a.k.c.NetworkClient$DefaultMetadataUpdater [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [Consumer clientId=consumer-email-1, groupId=email] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected

@@ -1,0 +1,16 @@
+2023-12-20 15:28:34,144 INFO o.a.k.c.c.i.ConsumerCoordinator [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [Consumer clientId=consumer-email-1, groupId=email] Revoke previously assigned partitions email-service-0
+2023-12-20 15:28:34,235 INFO o.s.c.l.LogAccessor [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] email: partitions revoked: [email-service-0]
+2023-12-20 15:28:34,251 INFO o.a.k.c.c.i.AbstractCoordinator [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [Consumer clientId=consumer-email-1, groupId=email] Member consumer-email-1-1580047b-6226-4dfd-9b31-b6f4bd6b617c sending LeaveGroup request to coordinator DESKTOP-UQ7M8HP:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
+2023-12-20 15:28:34,253 INFO o.a.k.c.c.i.AbstractCoordinator [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [Consumer clientId=consumer-email-1, groupId=email] Resetting generation and member id due to: consumer pro-actively leaving the group
+2023-12-20 15:28:34,254 INFO o.a.k.c.c.i.AbstractCoordinator [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [Consumer clientId=consumer-email-1, groupId=email] Request joining group due to: consumer pro-actively leaving the group
+2023-12-20 15:28:34,254 INFO o.a.k.c.c.KafkaConsumer [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [Consumer clientId=consumer-email-1, groupId=email] Unsubscribed all topics or patterns and assigned partitions
+2023-12-20 15:28:34,257 INFO o.a.k.c.c.i.AbstractCoordinator [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [Consumer clientId=consumer-email-1, groupId=email] Resetting generation and member id due to: consumer pro-actively leaving the group
+2023-12-20 15:28:34,258 INFO o.a.k.c.c.i.AbstractCoordinator [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] [Consumer clientId=consumer-email-1, groupId=email] Request joining group due to: consumer pro-actively leaving the group
+2023-12-20 15:28:34,437 INFO o.a.k.c.m.Metrics [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Metrics scheduler closed
+2023-12-20 15:28:34,438 INFO o.a.k.c.m.Metrics [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-12-20 15:28:34,439 INFO o.a.k.c.m.Metrics [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Metrics reporters closed
+2023-12-20 15:28:34,464 INFO o.a.k.c.u.AppInfoParser [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] App info kafka.consumer for consumer-email-1 unregistered
+2023-12-20 15:28:34,472 INFO o.s.c.l.LogAccessor [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] email: Consumer stopped
+2023-12-20 15:28:34,582 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-20 15:28:34,595 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-12-20 15:28:34,622 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.

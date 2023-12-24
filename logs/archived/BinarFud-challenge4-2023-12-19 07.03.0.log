@@ -1,0 +1,13 @@
+2023-12-19 19:03:17,770 INFO c.c.s.SocketIOServer [SpringApplicationShutdownHook] Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2023-12-19 19:03:19,464 ERROR c.c.s.SocketIOServer$1 [nioEventLoopGroup-4-1] SocketIO server start failed at port: 8085!
+2023-12-19 19:03:19,475 WARN o.s.b.f.a.InitDestroyAnnotationBeanPostProcessor [SpringApplicationShutdownHook] Destroy method on bean with name 'socketIOConfiguration' threw an exception: java.net.BindException: Address already in use: bind
+2023-12-19 19:03:19,520 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-19 19:03:19,723 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-12-19 19:03:19,853 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-12-19 19:03:46,579 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2023-12-19 19:03:46,921 INFO o.s.b.StartupInfoLogger [restartedMain] Starting ChallengeApplication using Java 20.0.1 with PID 37156 (C:\Users\FAJAR\Downloads\Belajar Java\Challenge_7\BinarFudMain\target\classes started by FAJAR in C:\Users\FAJAR\Downloads\Belajar Java\Challenge_7)
+2023-12-19 19:03:46,927 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-12-19 19:03:47,275 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-19 19:03:47,278 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-12-19 19:03:53,328 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-19 19:03:54,121 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 720 ms. Found 6 JPA repository interfaces.

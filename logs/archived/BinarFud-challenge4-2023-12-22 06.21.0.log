@@ -1,0 +1,3 @@
+2023-12-22 18:21:18,319 ERROR i.a.c.s.j.AuthTokenFilter [http-nio-8080-exec-7] Invalid or missing Authorization header
+2023-12-22 18:21:54,412 ERROR i.a.c.s.j.AuthTokenFilter [http-nio-8080-exec-8] Invalid or missing Authorization header
+2023-12-22 18:21:59,908 ERROR i.a.c.s.j.AuthTokenFilter [http-nio-8080-exec-9] Invalid or missing Authorization header

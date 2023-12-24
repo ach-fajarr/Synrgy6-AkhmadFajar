@@ -1,0 +1,6 @@
+2023-12-19 19:48:36,233 INFO c.c.s.SocketIOServer [SpringApplicationShutdownHook] Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2023-12-19 19:48:36,812 ERROR c.c.s.SocketIOServer$1 [nioEventLoopGroup-4-1] SocketIO server start failed at port: 8085!
+2023-12-19 19:48:36,818 WARN o.s.b.f.a.InitDestroyAnnotationBeanPostProcessor [SpringApplicationShutdownHook] Destroy method on bean with name 'socketIOConfiguration' threw an exception: java.net.BindException: Address already in use: bind
+2023-12-19 19:48:36,836 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-19 19:48:36,856 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-12-19 19:48:36,911 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.

@@ -1,0 +1,11 @@
+2023-12-20 13:11:27,502 INFO o.a.k.c.p.KafkaProducer [SpringApplicationShutdownHook] [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2023-12-20 13:11:27,519 INFO o.a.k.c.m.Metrics [SpringApplicationShutdownHook] Metrics scheduler closed
+2023-12-20 13:11:27,521 INFO o.a.k.c.m.Metrics [SpringApplicationShutdownHook] Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-12-20 13:11:27,525 INFO o.a.k.c.m.Metrics [SpringApplicationShutdownHook] Metrics reporters closed
+2023-12-20 13:11:27,527 INFO o.a.k.c.u.AppInfoParser [SpringApplicationShutdownHook] App info kafka.producer for producer-1 unregistered
+2023-12-20 13:11:27,538 INFO c.c.s.SocketIOServer [SpringApplicationShutdownHook] Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2023-12-20 13:11:27,630 ERROR c.c.s.SocketIOServer$1 [nioEventLoopGroup-4-1] SocketIO server start failed at port: 8085!
+2023-12-20 13:11:27,631 WARN o.s.b.f.a.InitDestroyAnnotationBeanPostProcessor [SpringApplicationShutdownHook] Destroy method on bean with name 'socketIOConfiguration' threw an exception: java.net.BindException: Address already in use: bind
+2023-12-20 13:11:27,636 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-20 13:11:27,646 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-12-20 13:11:27,666 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.

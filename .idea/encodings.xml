@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/ApiGateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ApiGateway/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/BinarFudMain/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/BinarFudMain/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Email/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Email/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/EmailMessage/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/EmailMessage/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/EmailSender/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/EmailSender/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/EmailService/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/EmailService/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SocketIO/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SocketIO/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/config-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/config-server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../New folder/Mas ilyas/sinergy6/microservicedemo/config-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../Scheduler/Email/src/main/java" charset="UTF-8" />
+  </component>
+</project>

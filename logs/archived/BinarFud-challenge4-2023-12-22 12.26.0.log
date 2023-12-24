@@ -1,0 +1,4 @@
+2023-12-22 00:26:46,335 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-22 00:26:46,355 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2023-12-22 00:26:46,365 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 8 ms
+2023-12-22 00:26:46,503 ERROR i.a.c.s.j.AuthTokenFilter [http-nio-8080-exec-2] Invalid or missing Authorization header

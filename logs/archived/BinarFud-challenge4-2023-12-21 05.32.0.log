@@ -1,0 +1,21 @@
+2023-12-21 17:32:05,315 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-12-21 17:32:07,052 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-21 17:32:07,102 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2023-12-21 17:32:07,106 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-12-21 17:32:10,367 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-12-21 17:32:10,395 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 70700 ms
+2023-12-21 17:32:15,068 INFO o.h.j.i.u.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-21 17:32:16,950 INFO o.h.Version [restartedMain] HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-12-21 17:32:16,972 INFO o.h.c.Environment [restartedMain] HHH000406: Using bytecode reflection optimizer
+2023-12-21 17:32:25,547 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-21 17:32:26,066 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2023-12-21 17:32:27,897 INFO c.z.h.p.HikariPool [restartedMain] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7683a5dd
+2023-12-21 17:32:27,927 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2023-12-21 17:32:28,247 WARN o.h.e.j.d.i.DialectFactoryImpl [restartedMain] HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-12-21 17:32:39,353 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-21 17:32:40,308 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-21 17:32:47,326 INFO o.s.d.j.r.q.QueryEnhancerFactory [restartedMain] Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-12-21 17:32:53,101 INFO c.c.s.SocketIOServer [restartedMain] Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2023-12-21 17:32:54,290 INFO c.c.s.SocketIOServer$1 [nioEventLoopGroup-2-1] SocketIO server started at port: 8088
+2023-12-21 17:32:55,307 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-21 17:32:59,211 INFO o.s.s.w.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6e142bba, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@634bea56, org.springframework.security.web.context.SecurityContextHolderFilter@b75e2b3, org.springframework.security.web.header.HeaderWriterFilter@53c393d1, org.springframework.security.web.authentication.logout.LogoutFilter@68948a58, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@b0de1b0, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@31278ea0, id.achfajar.challenge8.security.jwt.AuthTokenFilter@26cc59b9, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@c82451, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@26da14da, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@39378e4d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1c294a07, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4b2ed50f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3116d3bd, org.springframework.security.web.session.SessionManagementFilter@d568e94, org.springframework.security.web.access.ExceptionTranslationFilter@12689a9e, org.springframework.security.web.access.intercept.AuthorizationFilter@4745962e]

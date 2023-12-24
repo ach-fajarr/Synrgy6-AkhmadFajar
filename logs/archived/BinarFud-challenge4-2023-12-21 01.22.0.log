@@ -1,0 +1,1 @@
+2023-12-21 13:22:40,801 ERROR i.a.c.s.j.AuthTokenFilter [http-nio-8080-exec-5] Invalid or missing Authorization header

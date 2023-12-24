@@ -1,0 +1,29 @@
+2023-12-21 23:18:01,022 INFO i.a.c.s.NotificationPromoImpl [http-nio-8080-exec-2] Sent message to token. Device token: dd8my88RhxnfK5DYbgB7XX:APA91bFpNmOyu_rZGkKkCVAUd6CtpHgb4cocXESPyVwSHDDan6ThF5SbxHGgFpcn6f-KLiT_zb6Af1ZVX2V2LMT4G6F5-q75NeRsxH8p0PIOMvbHpsDN-46KvDFU5W3NC02xcNGs6_xM, projects/synrgy-challenge/messages/cf8ce500-19ed-4d77-8948-4506d0fd2738 msg {
+  "notification": {
+    "title": "Promo Terbaru",
+    "body": "Americano diskon sebesar 20%"
+  },
+  "androidConfig": {
+    "collapseKey": "ISINYA TOPIK",
+    "priority": "high",
+    "ttl": "120s",
+    "notification": {
+      "tag": "ISINYA TOPIK"
+    }
+  },
+  "apnsConfig": {
+    "payload": {
+      "aps": {
+        "category": "ISINYA TOPIK",
+        "thread-id": "ISINYA TOPIK"
+      }
+    }
+  },
+  "token": "dd8my88RhxnfK5DYbgB7XX:APA91bFpNmOyu_rZGkKkCVAUd6CtpHgb4cocXESPyVwSHDDan6ThF5SbxHGgFpcn6f-KLiT_zb6Af1ZVX2V2LMT4G6F5-q75NeRsxH8p0PIOMvbHpsDN-46KvDFU5W3NC02xcNGs6_xM"
+}
+2023-12-21 23:18:30,478 INFO c.c.s.SocketIOServer [SpringApplicationShutdownHook] Session store / pubsub factory used: MemoryStoreFactory (local session store only)
+2023-12-21 23:18:39,077 ERROR c.c.s.SocketIOServer$1 [nioEventLoopGroup-4-1] SocketIO server start failed at port: 8088!
+2023-12-21 23:18:39,088 WARN o.s.b.f.a.InitDestroyAnnotationBeanPostProcessor [SpringApplicationShutdownHook] Destroy method on bean with name 'socketIOConfiguration' threw an exception: java.net.BindException: Address already in use: bind
+2023-12-21 23:18:39,106 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-21 23:18:39,209 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-12-21 23:18:40,278 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.

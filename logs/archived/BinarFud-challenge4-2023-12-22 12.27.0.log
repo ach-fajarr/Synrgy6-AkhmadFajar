@@ -1,0 +1,9 @@
+2023-12-22 00:27:03,669 ERROR i.a.c.s.j.AuthTokenFilter [http-nio-8080-exec-3] Invalid or missing Authorization header
+2023-12-22 00:27:10,242 INFO i.a.c.s.NotificationPromoImpl [http-nio-8080-exec-3] Pesan notifikasi terkirim : dd8my88RhxnfK5DYbgB7XX:APA91bFpNmOyu_rZGkKkCVAUd6CtpHgb4cocXESPyVwSHDDan6ThF5SbxHGgFpcn6f-KLiT_zb6Af1ZVX2V2LMT4G6F5-q75NeRsxH8p0PIOMvbHpsDN-46KvDFU5W3NC02xcNGs6_xM, projects/synrgy-challenge/messages/256c8da1-e77a-4496-9301-f1a20be4d0b0 msg {
+  "notification": {
+    "title": "Promo Terbaru",
+    "body": "Americano diskon sebesar 10%"
+  },
+  "token": "dd8my88RhxnfK5DYbgB7XX:APA91bFpNmOyu_rZGkKkCVAUd6CtpHgb4cocXESPyVwSHDDan6ThF5SbxHGgFpcn6f-KLiT_zb6Af1ZVX2V2LMT4G6F5-q75NeRsxH8p0PIOMvbHpsDN-46KvDFU5W3NC02xcNGs6_xM"
+}
+2023-12-22 00:27:34,734 ERROR i.a.c.s.j.AuthTokenFilter [http-nio-8080-exec-4] Invalid or missing Authorization header
